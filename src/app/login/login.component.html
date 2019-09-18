@@ -1,0 +1,24 @@
+<p>login works! by {{myName}}</p>
+<div class="row">
+    <div class="col-6">
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+            UserName:
+            <input name="username" [(ngModel)]="model.username" #username="ngModel" required>
+            <!-- <div *ngIf="f.submitted && username.valid">
+                <div *ngIf="username.errors.required">UserName is Required</div>
+            </div>
+            --><br><br>
+            Password:
+            <input name="password" [(ngModel)]="model.password" #password="ngModel" type="password" required>
+            <!-- <div *ngIf="f.submitted && password.valid">
+                <div *ngIf="password.errors.required">password is Required</div>
+            </div> -->
+            <div class="mt-2">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-6">
+        {{model | json }}
+    </div>
+</div>

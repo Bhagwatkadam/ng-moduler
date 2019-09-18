@@ -1,7 +1,35 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<a routerLink='hr'>hr </a>
-<a routerLink='product'>product </a>
-<a routerLink='admin'>admin </a>
-<a routerLink='about'>About us</a>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand">Navbar</a>
 
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink='hr'>hr </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink='product'>product </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink='admin'>admin </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink='about'>About us</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink='employee'>Employee</a>
+      </li>
+      <li>
+        <button (click)="logout()">Logout</button>
+      </li>
+    </ul>
+  </div>
+</nav>
 <router-outlet></router-outlet>

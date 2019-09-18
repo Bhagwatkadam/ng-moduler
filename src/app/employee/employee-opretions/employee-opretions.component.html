@@ -1,0 +1,33 @@
+<p>employee-opretions works!</p>
+<div class="container">
+    <h2>Employee form</h2>
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" class="mb-4">
+        <div class="form-group">
+            <label for="name">name:</label>
+            <input type="email" class="form-control" [(ngModel)]="model.name" #name="ngModel" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="pwd">age:</label>
+            <input class="form-control" [(ngModel)]="model.age" #age="ngModel" name="age">
+        </div>
+        <div class="form-group">
+            <label for="pwd">salary:</label>
+            <input class="form-control" [(ngModel)]="model.salary" #salary="ngModel" name="salary">
+        </div>
+        <button type="submit" class="btn btn-primary">{{buttonName}}</button>
+    </form>
+    <table class="table">
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>salary</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let emp of emps">
+            <td> {{emp.employee_name}}</td>
+            <td> {{emp.employee_age}}</td>
+            <td> {{emp.employee_salary}}</td>
+            <td><a class="btn btn-danger" (click)="deleteEmp(emp)">Delete</a> <a class="btn btn-info ml-2" (click)="updateEmp(emp)">Update</a></td>
+        </tr>
+    </table>
+</div>
